@@ -8,22 +8,37 @@
 
 /* Begin PBXBuildFile section */
 		7EA8BB621C270CBE00E4110B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA8BB611C270CBE00E4110B /* AppDelegate.swift */; };
-		7EA8BB641C270CBE00E4110B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA8BB631C270CBE00E4110B /* FirstViewController.swift */; };
-		7EA8BB661C270CBE00E4110B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA8BB651C270CBE00E4110B /* SecondViewController.swift */; };
+		7EA8BB641C270CBE00E4110B /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA8BB631C270CBE00E4110B /* FeedViewController.swift */; };
+		7EA8BB661C270CBE00E4110B /* StarredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA8BB651C270CBE00E4110B /* StarredViewController.swift */; };
 		7EA8BB691C270CBE00E4110B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EA8BB671C270CBE00E4110B /* Main.storyboard */; };
 		7EA8BB6B1C270CBE00E4110B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EA8BB6A1C270CBE00E4110B /* Assets.xcassets */; };
 		7EA8BB6E1C270CBE00E4110B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EA8BB6C1C270CBE00E4110B /* LaunchScreen.storyboard */; };
+		7EA8BB761C27131700E4110B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA8BB751C27131700E4110B /* SettingsViewController.swift */; };
+		7EA8BB781C2724EC00E4110B /* RecentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA8BB771C2724EC00E4110B /* RecentViewController.swift */; };
+		7EA8BB821C27718A00E4110B /* Lobster 1.4.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7EA8BB811C27718A00E4110B /* Lobster 1.4.otf */; };
+		7EA8BB841C2779AB00E4110B /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA8BB831C2779AB00E4110B /* SwiftyJSON.swift */; };
+		7EA8BB861C277B6200E4110B /* PremeFeedAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA8BB851C277B6200E4110B /* PremeFeedAPI.swift */; };
+		7EA8BB8B1C28F2DF00E4110B /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA8BB8A1C28F2DF00E4110B /* ProductViewController.swift */; };
+		7EA8BB911C29C3DD00E4110B /* SupremeItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA8BB901C29C3DD00E4110B /* SupremeItemCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7EA8BB5E1C270CBE00E4110B /* PremeFeed-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PremeFeed-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EA8BB611C270CBE00E4110B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7EA8BB631C270CBE00E4110B /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		7EA8BB651C270CBE00E4110B /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		7EA8BB631C270CBE00E4110B /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		7EA8BB651C270CBE00E4110B /* StarredViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarredViewController.swift; sourceTree = "<group>"; };
 		7EA8BB681C270CBE00E4110B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7EA8BB6A1C270CBE00E4110B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7EA8BB6D1C270CBE00E4110B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7EA8BB6F1C270CBE00E4110B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EA8BB751C27131700E4110B /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		7EA8BB771C2724EC00E4110B /* RecentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentViewController.swift; sourceTree = "<group>"; };
+		7EA8BB811C27718A00E4110B /* Lobster 1.4.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lobster 1.4.otf"; sourceTree = "<group>"; };
+		7EA8BB831C2779AB00E4110B /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		7EA8BB851C277B6200E4110B /* PremeFeedAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PremeFeedAPI.swift; sourceTree = "<group>"; };
+		7EA8BB8A1C28F2DF00E4110B /* ProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		7EA8BB901C29C3DD00E4110B /* SupremeItemCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupremeItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		7EA8BB921C2A2F3000E4110B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +72,54 @@
 			isa = PBXGroup;
 			children = (
 				7EA8BB611C270CBE00E4110B /* AppDelegate.swift */,
-				7EA8BB631C270CBE00E4110B /* FirstViewController.swift */,
-				7EA8BB651C270CBE00E4110B /* SecondViewController.swift */,
-				7EA8BB671C270CBE00E4110B /* Main.storyboard */,
+				7EA8BB901C29C3DD00E4110B /* SupremeItemCollectionViewCell.swift */,
+				7EA8BB881C277B8900E4110B /* Controllers */,
+				7EA8BB871C277B7D00E4110B /* Views */,
+				7EA8BB891C277B9D00E4110B /* Lib */,
 				7EA8BB6A1C270CBE00E4110B /* Assets.xcassets */,
-				7EA8BB6C1C270CBE00E4110B /* LaunchScreen.storyboard */,
-				7EA8BB6F1C270CBE00E4110B /* Info.plist */,
+				7EA8BB7A1C27542E00E4110B /* Supporting Files */,
 			);
 			path = "PremeFeed-iOS";
+			sourceTree = "<group>";
+		};
+		7EA8BB7A1C27542E00E4110B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7EA8BB921C2A2F3000E4110B /* README.md */,
+				7EA8BB811C27718A00E4110B /* Lobster 1.4.otf */,
+				7EA8BB6F1C270CBE00E4110B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7EA8BB871C277B7D00E4110B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7EA8BB671C270CBE00E4110B /* Main.storyboard */,
+				7EA8BB6C1C270CBE00E4110B /* LaunchScreen.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		7EA8BB881C277B8900E4110B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7EA8BB631C270CBE00E4110B /* FeedViewController.swift */,
+				7EA8BB651C270CBE00E4110B /* StarredViewController.swift */,
+				7EA8BB771C2724EC00E4110B /* RecentViewController.swift */,
+				7EA8BB751C27131700E4110B /* SettingsViewController.swift */,
+				7EA8BB8A1C28F2DF00E4110B /* ProductViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		7EA8BB891C277B9D00E4110B /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				7EA8BB851C277B6200E4110B /* PremeFeedAPI.swift */,
+				7EA8BB831C2779AB00E4110B /* SwiftyJSON.swift */,
+			);
+			name = Lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +181,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EA8BB821C27718A00E4110B /* Lobster 1.4.otf in Resources */,
 				7EA8BB6E1C270CBE00E4110B /* LaunchScreen.storyboard in Resources */,
 				7EA8BB6B1C270CBE00E4110B /* Assets.xcassets in Resources */,
 				7EA8BB691C270CBE00E4110B /* Main.storyboard in Resources */,
@@ -139,9 +195,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EA8BB661C270CBE00E4110B /* SecondViewController.swift in Sources */,
+				7EA8BB861C277B6200E4110B /* PremeFeedAPI.swift in Sources */,
+				7EA8BB661C270CBE00E4110B /* StarredViewController.swift in Sources */,
+				7EA8BB781C2724EC00E4110B /* RecentViewController.swift in Sources */,
 				7EA8BB621C270CBE00E4110B /* AppDelegate.swift in Sources */,
-				7EA8BB641C270CBE00E4110B /* FirstViewController.swift in Sources */,
+				7EA8BB911C29C3DD00E4110B /* SupremeItemCollectionViewCell.swift in Sources */,
+				7EA8BB841C2779AB00E4110B /* SwiftyJSON.swift in Sources */,
+				7EA8BB641C270CBE00E4110B /* FeedViewController.swift in Sources */,
+				7EA8BB8B1C28F2DF00E4110B /* ProductViewController.swift in Sources */,
+				7EA8BB761C27131700E4110B /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +351,7 @@
 				7EA8BB741C270CBE00E4110B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

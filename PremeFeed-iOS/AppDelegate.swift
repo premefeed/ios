@@ -8,14 +8,21 @@
 
 import UIKit
 
+// UIButton sub-class that can carry supremeItem information through segues
+class SupremeItemButton: UIButton {
+    var supremeItem: SupremeItem?
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // Set window tint to Supreme red
+        window!.tintColor = UIColor(red: 0.92, green: 0.23, blue: 0.1, alpha: 1)
+        
         return true
     }
 

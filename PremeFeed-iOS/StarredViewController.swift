@@ -8,11 +8,14 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class StarredViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // Setup Nav-bar so that it doesn't look like shit.
+        self.navigationController!.navigationBar.barStyle = UIBarStyle.Black
+        self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont(name: "Lobster1.4", size: 32.0)!]
     }
 
     override func didReceiveMemoryWarning() {
