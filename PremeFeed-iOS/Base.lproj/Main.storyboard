@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RNr-kN-iVd">
-                                <rect key="frame" x="0.0" y="10" width="600" height="541"/>
+                                <rect key="frame" x="10" y="10" width="580" height="541"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FRF-hw-LmY">
                                     <size key="itemSize" width="188" height="188"/>
@@ -36,24 +36,36 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Edy-So-eUa" customClass="SupremeItemButton" customModule="PremeFeed_iOS" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="188" height="188"/>
+                                                    <rect key="frame" x="5" y="5" width="178" height="178"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="188" id="pkE-am-afI"/>
-                                                        <constraint firstAttribute="width" constant="188" id="wdR-hw-hkK"/>
+                                                        <constraint firstAttribute="width" constant="178" id="RXr-Ad-fmk"/>
+                                                        <constraint firstAttribute="height" constant="178" id="UjL-Kx-ezb"/>
                                                     </constraints>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="Edy-So-eUa" firstAttribute="top" secondItem="FXH-qL-f2l" secondAttribute="top" id="P9o-Ah-Huj"/>
-                                            <constraint firstItem="Edy-So-eUa" firstAttribute="leading" secondItem="FXH-qL-f2l" secondAttribute="leading" id="UGy-EJ-A33"/>
+                                            <constraint firstItem="Edy-So-eUa" firstAttribute="centerY" secondItem="FXH-qL-f2l" secondAttribute="centerY" id="5no-a0-gVG"/>
+                                            <constraint firstItem="Edy-So-eUa" firstAttribute="top" secondItem="FXH-qL-f2l" secondAttribute="top" constant="5" id="7ON-cJ-dAB"/>
+                                            <constraint firstItem="Edy-So-eUa" firstAttribute="centerX" secondItem="FXH-qL-f2l" secondAttribute="centerX" id="Fa0-VC-66e"/>
+                                            <constraint firstItem="Edy-So-eUa" firstAttribute="leading" secondItem="FXH-qL-f2l" secondAttribute="leading" constant="5" id="HN3-1d-NDQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="Edy-So-eUa" secondAttribute="trailing" constant="5" id="Vci-zJ-Zwn"/>
+                                            <constraint firstItem="Edy-So-eUa" firstAttribute="centerX" secondItem="FXH-qL-f2l" secondAttribute="centerX" id="ZF0-Zk-1Ml"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="Edy-So-eUa" secondAttribute="trailing" constant="-8" id="bcR-4D-df8"/>
+                                            <constraint firstItem="Edy-So-eUa" firstAttribute="centerY" secondItem="FXH-qL-f2l" secondAttribute="centerY" id="oqf-ad-33r"/>
+                                            <constraint firstAttribute="bottom" secondItem="Edy-So-eUa" secondAttribute="bottom" constant="5" id="uNg-kZ-Syy"/>
                                         </constraints>
                                         <edgeInsets key="layoutMargins" top="12" left="12" bottom="12" right="12"/>
                                         <variation key="default">
                                             <mask key="constraints">
+                                                <exclude reference="5no-a0-gVG"/>
+                                                <exclude reference="7ON-cJ-dAB"/>
+                                                <exclude reference="HN3-1d-NDQ"/>
+                                                <exclude reference="Vci-zJ-Zwn"/>
+                                                <exclude reference="ZF0-Zk-1Ml"/>
                                                 <exclude reference="bcR-4D-df8"/>
+                                                <exclude reference="uNg-kZ-Syy"/>
                                             </mask>
                                         </variation>
                                         <connections>
@@ -70,11 +82,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="RNr-kN-iVd" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="topMargin" id="0BO-34-c3O"/>
-                            <constraint firstItem="RNr-kN-iVd" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-20" id="1yw-GJ-9pW"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="RNr-kN-iVd" secondAttribute="trailing" constant="-20" id="4nA-ok-Kc8"/>
-                            <constraint firstItem="RNr-kN-iVd" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="topMargin" constant="10" id="8AI-LR-mq8"/>
+                            <constraint firstItem="RNr-kN-iVd" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" constant="10" id="5Ev-6N-eOp"/>
+                            <constraint firstAttribute="trailing" secondItem="RNr-kN-iVd" secondAttribute="trailing" constant="10" id="M3j-JG-wNi"/>
+                            <constraint firstItem="RNr-kN-iVd" firstAttribute="bottom" secondItem="4ug-Mw-9AY" secondAttribute="top" id="QmV-b1-BT7"/>
                             <constraint firstItem="RNr-kN-iVd" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="XS1-Yb-5S2"/>
-                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="RNr-kN-iVd" secondAttribute="bottom" id="bzB-kT-fpN"/>
+                            <constraint firstItem="RNr-kN-iVd" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="topMargin" constant="10" id="a7c-9p-m4y"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -83,7 +95,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Premefeed" id="1AR-aS-9Ng" userLabel="premefeed">
+                    <navigationItem key="navigationItem" title="Premefeed" id="1AR-aS-9Ng">
                         <barButtonItem key="backBarButtonItem" title="Feed" id="uZF-7d-39B"/>
                     </navigationItem>
                     <connections>
@@ -127,7 +139,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="PremeFeed" id="CZe-EF-ee8"/>
+                    <navigationItem key="navigationItem" title="Premefeed" id="CZe-EF-ee8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -146,7 +158,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="PremeFeed" id="GRF-8f-x3Z"/>
+                    <navigationItem key="navigationItem" title="Premefeed" id="GRF-8f-x3Z"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2GI-zo-Roq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -165,7 +177,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="PremeFeed" id="4p2-eT-IOx"/>
+                    <navigationItem key="navigationItem" title="Premefeed" id="4p2-eT-IOx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yrF-Sz-eDt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -13,7 +13,12 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
     @IBOutlet var FeedSubview: UIView!
     @IBOutlet weak var SupremeCollectionView: UICollectionView!
     
-    var supremeItems = [SupremeItem]()
+    var supremeItems = [SupremeItem]() {
+        didSet {
+            // Force reload the CollectionView now that data exists
+            self.SupremeCollectionView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,11 +41,9 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
              *
              */
             
+            
             // Store the Array<SupremeItem>s in the controller for use later
             self.supremeItems = items
-            // Force reload the CollectionView now that data exists
-            self.SupremeCollectionView.reloadData()
-            
             
             // let cellSize = (self.SupremeCollectionView.bounds.width / 2) - 30
             // (self.SupremeCollectionView.collectionViewLayout as! UICollectionViewFlowLayout).estimatedItemSize = CGSizeMake(cellSize, cellSize)
