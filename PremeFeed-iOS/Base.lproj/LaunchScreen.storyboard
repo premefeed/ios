@@ -20,17 +20,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchImage" translatesAutoresizingMaskIntoConstraints="NO" id="XlH-eX-k28">
-                                <rect key="frame" x="70" y="90" width="460" height="460"/>
+                                <rect key="frame" x="0.0" y="90" width="600" height="600"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="XlH-eX-k28" secondAttribute="height" multiplier="1:1" id="OEm-SQ-xMf"/>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.93333333330000001" green="0.2274509804" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="XlH-eX-k28" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="70" id="1WF-lg-cyF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="XlH-eX-k28" secondAttribute="trailing" constant="50" id="JdC-uI-2f6"/>
-                            <constraint firstItem="XlH-eX-k28" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="50" id="QOB-2a-vcc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XlH-eX-k28" secondAttribute="trailing" constant="-20" id="JdC-uI-2f6"/>
+                            <constraint firstItem="XlH-eX-k28" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-20" id="QOB-2a-vcc"/>
                             <constraint firstItem="XlH-eX-k28" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="38" id="qNt-cS-XCt"/>
                         </constraints>
                         <variation key="default">
