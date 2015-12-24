@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -18,8 +19,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="O2j-cW-gjv">
+                                <rect key="frame" x="10" y="60" width="580" height="481"/>
+                                <color key="color" red="0.74665790799999998" green="0.74667567010000002" blue="0.74666607380000005" alpha="0.91000002619999998" colorSpace="deviceRGB"/>
+                            </activityIndicatorView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RNr-kN-iVd">
-                                <rect key="frame" x="10" y="10" width="580" height="541"/>
+                                <rect key="frame" x="10" y="64" width="580" height="487"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FRF-hw-LmY">
                                     <size key="itemSize" width="188" height="188"/>
@@ -29,47 +34,27 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SupremeItemCell" id="FXH-qL-f2l" customClass="SupremeItemCollectionViewCell" customModule="PremeFeed_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="64" width="188" height="188"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="188" height="188"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="188" height="188"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Edy-So-eUa" customClass="SupremeItemButton" customModule="PremeFeed_iOS" customModuleProvider="target">
-                                                    <rect key="frame" x="5" y="5" width="178" height="178"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="178" id="RXr-Ad-fmk"/>
-                                                        <constraint firstAttribute="height" constant="178" id="UjL-Kx-ezb"/>
-                                                    </constraints>
-                                                </button>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GFS-65-zhi">
+                                                    <rect key="frame" x="8" y="8" width="172" height="172"/>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="Edy-So-eUa" firstAttribute="centerY" secondItem="FXH-qL-f2l" secondAttribute="centerY" id="5no-a0-gVG"/>
-                                            <constraint firstItem="Edy-So-eUa" firstAttribute="top" secondItem="FXH-qL-f2l" secondAttribute="top" constant="5" id="7ON-cJ-dAB"/>
-                                            <constraint firstItem="Edy-So-eUa" firstAttribute="centerX" secondItem="FXH-qL-f2l" secondAttribute="centerX" id="Fa0-VC-66e"/>
-                                            <constraint firstItem="Edy-So-eUa" firstAttribute="leading" secondItem="FXH-qL-f2l" secondAttribute="leading" constant="5" id="HN3-1d-NDQ"/>
-                                            <constraint firstAttribute="trailing" secondItem="Edy-So-eUa" secondAttribute="trailing" constant="5" id="Vci-zJ-Zwn"/>
-                                            <constraint firstItem="Edy-So-eUa" firstAttribute="centerX" secondItem="FXH-qL-f2l" secondAttribute="centerX" id="ZF0-Zk-1Ml"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="Edy-So-eUa" secondAttribute="trailing" constant="-8" id="bcR-4D-df8"/>
-                                            <constraint firstItem="Edy-So-eUa" firstAttribute="centerY" secondItem="FXH-qL-f2l" secondAttribute="centerY" id="oqf-ad-33r"/>
-                                            <constraint firstAttribute="bottom" secondItem="Edy-So-eUa" secondAttribute="bottom" constant="5" id="uNg-kZ-Syy"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="GFS-65-zhi" secondAttribute="bottom" constant="-4" id="5FV-dU-yt0"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="GFS-65-zhi" secondAttribute="trailing" constant="-4" id="BVT-I0-lU5"/>
+                                            <constraint firstItem="GFS-65-zhi" firstAttribute="top" secondItem="FXH-qL-f2l" secondAttribute="topMargin" constant="-4" id="KIX-rO-Yv3"/>
+                                            <constraint firstItem="GFS-65-zhi" firstAttribute="leading" secondItem="FXH-qL-f2l" secondAttribute="leadingMargin" constant="-4" id="YPL-uP-UL9"/>
                                         </constraints>
                                         <edgeInsets key="layoutMargins" top="12" left="12" bottom="12" right="12"/>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="5no-a0-gVG"/>
-                                                <exclude reference="7ON-cJ-dAB"/>
-                                                <exclude reference="HN3-1d-NDQ"/>
-                                                <exclude reference="Vci-zJ-Zwn"/>
-                                                <exclude reference="ZF0-Zk-1Ml"/>
-                                                <exclude reference="bcR-4D-df8"/>
-                                                <exclude reference="uNg-kZ-Syy"/>
-                                            </mask>
-                                        </variation>
                                         <connections>
-                                            <outlet property="CellButton" destination="Edy-So-eUa" id="9iO-x6-RVZ"/>
+                                            <outlet property="CellImage" destination="GFS-65-zhi" id="lNg-yS-waE"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -82,11 +67,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="RNr-kN-iVd" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="topMargin" id="0BO-34-c3O"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="O2j-cW-gjv" secondAttribute="bottom" constant="10" id="42t-ge-MLu"/>
+                            <constraint firstItem="O2j-cW-gjv" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-10" id="4HJ-AH-djB"/>
+                            <constraint firstItem="O2j-cW-gjv" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="topMargin" constant="60" id="4bs-MU-OQs"/>
                             <constraint firstItem="RNr-kN-iVd" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" constant="10" id="5Ev-6N-eOp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="O2j-cW-gjv" secondAttribute="trailing" constant="-10" id="Eg0-Ry-hUW"/>
                             <constraint firstAttribute="trailing" secondItem="RNr-kN-iVd" secondAttribute="trailing" constant="10" id="M3j-JG-wNi"/>
                             <constraint firstItem="RNr-kN-iVd" firstAttribute="bottom" secondItem="4ug-Mw-9AY" secondAttribute="top" id="QmV-b1-BT7"/>
                             <constraint firstItem="RNr-kN-iVd" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="XS1-Yb-5S2"/>
-                            <constraint firstItem="RNr-kN-iVd" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="topMargin" constant="10" id="a7c-9p-m4y"/>
+                            <constraint firstItem="RNr-kN-iVd" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="topMargin" constant="64" id="a7c-9p-m4y"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -101,6 +90,7 @@
                     <connections>
                         <outlet property="FeedSubview" destination="tsR-hK-woN" id="0u9-7S-LL5"/>
                         <outlet property="SupremeCollectionView" destination="RNr-kN-iVd" id="uv5-wi-iku"/>
+                        <outlet property="collectionViewSpinner" destination="O2j-cW-gjv" id="t5I-z6-orK"/>
                         <segue destination="irW-g9-ANr" kind="show" identifier="segueToProductView" id="7WM-Dr-VFM"/>
                     </connections>
                 </viewController>
@@ -119,12 +109,28 @@
                     <view key="view" contentMode="scaleToFill" id="Ord-P6-AS5">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hhU-Ny-LSa">
+                                <rect key="frame" x="20" y="72" width="560" height="560"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hhU-Ny-LSa" secondAttribute="height" multiplier="1:1" id="rDV-y0-AU2"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hhU-Ny-LSa" firstAttribute="trailing" secondItem="Ord-P6-AS5" secondAttribute="trailingMargin" id="agV-ZG-yF1"/>
+                            <constraint firstItem="hhU-Ny-LSa" firstAttribute="top" secondItem="DAF-ji-aya" secondAttribute="bottom" constant="8" symbolic="YES" id="fkz-og-6GS"/>
+                            <constraint firstItem="hhU-Ny-LSa" firstAttribute="leading" secondItem="Ord-P6-AS5" secondAttribute="leadingMargin" id="swf-sZ-9tn"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="itemImage" destination="hhU-Ny-LSa" id="Wl2-rQ-gwQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t6W-r7-kKL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-682" y="2507"/>
+            <point key="canvasLocation" x="-682" y="2423"/>
         </scene>
         <!--Starred-->
         <scene sceneID="wg7-f3-ORb">

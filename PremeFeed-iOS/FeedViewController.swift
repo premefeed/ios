@@ -6,17 +6,22 @@
 //  Copyright © 2015 Cryptoc1. All rights reserved.
 //
 
+
+// TODO: rename variables for more consistant camelCasing
+
 import UIKit
 
 class FeedViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     @IBOutlet var FeedSubview: UIView!
     @IBOutlet weak var SupremeCollectionView: UICollectionView!
+    @IBOutlet weak var collectionViewSpinner: UIActivityIndicatorView!
     
     var supremeItems = [SupremeItem]() {
         didSet {
             // Force reload the CollectionView now that data exists
             self.SupremeCollectionView.reloadData()
+            self.collectionViewSpinner.stopAnimating()
         }
     }
     
@@ -30,23 +35,10 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         let api: PremeFeedAPI = PremeFeedAPI()
         api.getAllItems({ (items) -> Void in
-            // Fucking async bullshit
-            
-            
-            /*
-             *
-             *  Add progress spinner while this shit loads
-             *
-             *  progress.startAnimation()
-             *
-             */
-            
-            
             // Store the Array<SupremeItem>s in the controller for use later
             self.supremeItems = items
             
-            // let cellSize = (self.SupremeCollectionView.bounds.width / 2) - 30
-            // (self.SupremeCollectionView.collectionViewLayout as! UICollectionViewFlowLayout).estimatedItemSize = CGSizeMake(cellSize, cellSize)
+            return
         })
         
     }
@@ -58,32 +50,23 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell: SupremeItemCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("SupremeItemCell", forIndexPath: indexPath) as! SupremeItemCollectionViewCell
         let img: UIImage = UIImage(data: NSData(contentsOfURL: NSURL(string: self.supremeItems[indexPath.row].image!)!)!)!
-        cell.CellButton.setBackgroundImage(img, forState: UIControlState.Normal)
-        cell.CellButton.addTarget(self, action: "supremeItemPressed:", forControlEvents: UIControlEvents.TouchUpInside)
-        cell.CellButton.supremeItem = self.supremeItems[indexPath.row]
-        cell.bounds.size.width = collectionView.bounds.width/2
+        cell.CellImage.image = img
         return cell
     }
     
     // This doesn't actually do anything since we have buttons in the cells
     // Maybe we could use this the trigger the segue to the ProductViewController, storing the product info in the cell (since we already have a custom class
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        print("Cell \(indexPath.row) selected")
+        self.performSegueWithIdentifier("segueToProductView", sender: self.supremeItems[indexPath.row])
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Store the product information stored in the button into the ProductViewController
-        (segue.destinationViewController as! ProductViewController).Product = (sender as! SupremeItemButton).supremeItem
+        (segue.destinationViewController as! ProductViewController).supremeItem = sender as! SupremeItem
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    func supremeItemPressed(sender: SupremeItemButton!) {
-        // Go to the Product page
-        self.performSegueWithIdentifier("segueToProductView", sender: sender)
-    }
-
 }

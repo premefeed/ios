@@ -10,7 +10,7 @@ Releasable: No
 
 
 ##### TODO
-- [ ] Fix CollectionViewCell alignment and shit in the feed
+- [x] Fix CollectionViewCell alignment and shit in the feed
 - [ ] Start ProductPage
     + Paged image viewer
     + Description + price

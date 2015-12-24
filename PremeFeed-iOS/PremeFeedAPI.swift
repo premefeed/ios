@@ -27,12 +27,14 @@ class PremeFeedAPI {
     func getItemById(id: String, callback: (SupremeItem) -> Void) {
         self.makeRequest(NSURL(string: "\(self.apiURL)/item/id?id=\(id)")!, callback: { (json) -> Void in
             callback(SupremeItem(json: json))
+            return
         })
     }
     
     func getItemByLink(link: String, callback: (SupremeItem) -> Void) {
         self.makeRequest(NSURL(string: "\(self.apiURL)/item/link?link=\(link.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!)")!, callback: { (json) -> Void in
             callback(SupremeItem(json: json))
+            return
         })
     }
     
@@ -43,6 +45,7 @@ class PremeFeedAPI {
                 ret.append(SupremeItem(json: json[i]))
             }
             callback(ret)
+            return
         })
     }
     
@@ -53,6 +56,7 @@ class PremeFeedAPI {
                 ret.append(SupremeItem(json: json[i]))
             }
             callback(ret)
+            return
         })
     }
     
@@ -62,7 +66,7 @@ class PremeFeedAPI {
             for (i, _) in json.enumerate() {
                 ret.append(SupremeItem(json: json[i]))
             }
-            callback(ret)
+             callback(ret)
         })
     }
     

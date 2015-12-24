@@ -8,11 +8,6 @@
 
 import UIKit
 
-// UIButton sub-class that can carry supremeItem information through segues
-class SupremeItemButton: UIButton {
-    var supremeItem: SupremeItem?
-}
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

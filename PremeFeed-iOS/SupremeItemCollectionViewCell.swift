@@ -10,6 +10,7 @@ import UIKit
 
 class SupremeItemCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var CellButton: SupremeItemButton!
+    // @IBOutlet weak var CellButton: SupremeItemButton!
+    @IBOutlet weak var CellImage: UIImageView!
     
 }

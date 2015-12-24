@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,12 +18,34 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchImage" translatesAutoresizingMaskIntoConstraints="NO" id="XlH-eX-k28">
+                                <rect key="frame" x="70" y="90" width="460" height="460"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="XlH-eX-k28" secondAttribute="height" multiplier="1:1" id="OEm-SQ-xMf"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XlH-eX-k28" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="70" id="1WF-lg-cyF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XlH-eX-k28" secondAttribute="trailing" constant="50" id="JdC-uI-2f6"/>
+                            <constraint firstItem="XlH-eX-k28" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="50" id="QOB-2a-vcc"/>
+                            <constraint firstItem="XlH-eX-k28" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="38" id="qNt-cS-XCt"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="qNt-cS-XCt"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="-25" y="275"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="launchImage" width="400" height="400"/>
+    </resources>
 </document>
