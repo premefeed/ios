@@ -6,21 +6,17 @@
 //  Copyright © 2015 Cryptoc1. All rights reserved.
 //
 
-
-// TODO: rename variables for more consistant camelCasing
-
 import UIKit
 
 class FeedViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
-    @IBOutlet var FeedSubview: UIView!
-    @IBOutlet weak var SupremeCollectionView: UICollectionView!
+    @IBOutlet weak var supremeCollectionView: UICollectionView!
     @IBOutlet weak var collectionViewSpinner: UIActivityIndicatorView!
     
     var supremeItems = [SupremeItem]() {
         didSet {
             // Force reload the CollectionView now that data exists
-            self.SupremeCollectionView.reloadData()
+            self.supremeCollectionView.reloadData()
             self.collectionViewSpinner.stopAnimating()
         }
     }
@@ -50,7 +46,7 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell: SupremeItemCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("SupremeItemCell", forIndexPath: indexPath) as! SupremeItemCollectionViewCell
         let img: UIImage = UIImage(data: NSData(contentsOfURL: NSURL(string: self.supremeItems[indexPath.row].image!)!)!)!
-        cell.CellImage.image = img
+        cell.cellImage.image = img
         return cell
     }
     

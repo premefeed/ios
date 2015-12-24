@@ -54,7 +54,7 @@
                                         </constraints>
                                         <edgeInsets key="layoutMargins" top="12" left="12" bottom="12" right="12"/>
                                         <connections>
-                                            <outlet property="CellImage" destination="GFS-65-zhi" id="lNg-yS-waE"/>
+                                            <outlet property="cellImage" destination="GFS-65-zhi" id="e5h-ah-OzY"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -88,9 +88,8 @@
                         <barButtonItem key="backBarButtonItem" title="Feed" id="uZF-7d-39B"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="FeedSubview" destination="tsR-hK-woN" id="0u9-7S-LL5"/>
-                        <outlet property="SupremeCollectionView" destination="RNr-kN-iVd" id="uv5-wi-iku"/>
                         <outlet property="collectionViewSpinner" destination="O2j-cW-gjv" id="t5I-z6-orK"/>
+                        <outlet property="supremeCollectionView" destination="RNr-kN-iVd" id="HCa-0I-Tii"/>
                         <segue destination="irW-g9-ANr" kind="show" identifier="segueToProductView" id="7WM-Dr-VFM"/>
                     </connections>
                 </viewController>
@@ -112,6 +111,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hhU-Ny-LSa">
                                 <rect key="frame" x="20" y="72" width="560" height="560"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hhU-Ny-LSa" secondAttribute="height" multiplier="1:1" id="rDV-y0-AU2"/>
                                 </constraints>
@@ -242,7 +242,7 @@
         <scene sceneID="XsT-zJ-EiT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="794-B4-VAu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Starred" image="starred" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Starred" image="star-outline" id="cPa-gy-q4n"/>
                     <toolbarItems/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5VJ-P2-sSA">
@@ -318,6 +318,6 @@
         <image name="feed" width="25" height="25"/>
         <image name="recents" width="25" height="25"/>
         <image name="settings" width="25" height="25"/>
-        <image name="starred" width="25" height="25"/>
+        <image name="star-outline" width="25" height="25"/>
     </resources>
 </document>

@@ -41,8 +41,8 @@ class PremeFeedAPI {
     func getItemsByTitle(title: String, callback: (Array<SupremeItem>) -> Void) {
         self.makeRequest(NSURL(string: "\(self.apiURL)/items/title?title=\(title.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!)")!, callback: { (json) -> Void in
             var ret = [SupremeItem]()
-            for (i, _) in json.enumerate() {
-                ret.append(SupremeItem(json: json[i]))
+            for (i, _) in json["items"].enumerate() {
+                ret.append(SupremeItem(json: json["items"][i]))
             }
             callback(ret)
             return
@@ -52,8 +52,8 @@ class PremeFeedAPI {
     func getItemsByAvailability(availability: String, callback: (Array<SupremeItem>) -> Void) {
         self.makeRequest(NSURL(string: "\(self.apiURL)/items/availability?availability=\(availability.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet()))")!, callback: { (json) -> Void in
             var ret = [SupremeItem]()
-            for (i, _) in json.enumerate() {
-                ret.append(SupremeItem(json: json[i]))
+            for (i, _) in json["items"].enumerate() {
+                ret.append(SupremeItem(json: json["items"][i]))
             }
             callback(ret)
             return
@@ -63,10 +63,10 @@ class PremeFeedAPI {
     func getAllItems(callback: (Array<SupremeItem>) -> Void) {
         self.makeRequest(NSURL(string: "\(self.apiURL)/items/all")!, callback: { (json) -> Void in
             var ret = [SupremeItem]()
-            for (i, _) in json.enumerate() {
-                ret.append(SupremeItem(json: json[i]))
+            for (i, _) in json["items"].enumerate() {
+                ret.append(SupremeItem(json: json["items"][i]))
             }
-             callback(ret)
+            callback(ret)
         })
     }
     
