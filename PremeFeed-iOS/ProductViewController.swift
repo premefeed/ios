@@ -39,12 +39,16 @@ class ProductViewController: UIViewController, UIScrollViewDelegate {
                 started to try this: http://swiftiostutorials.com/ios-tutorial-using-uipageviewcontroller-create-content-slider-objective-cswift/ but wasn't sure how to implement it within this app's circumstances
         */
         self.itemImage.image = UIImage(data: NSData(contentsOfURL: NSURL(string: self.supremeItem.images![0])!)!)!
-        let frame: CGRect = CGRectMake(CGFloat(15), self.itemImage.bounds.height - (self.itemImage.bounds.height / 5.5), self.view.frame.size.width, CGFloat(20))
-        let itemTitleLabel = UILabel(frame: frame)
-        itemTitleLabel.text = self.supremeItem.title!
-        itemTitleLabel.font = UIFont.boldSystemFontOfSize(20.0)
-//        itemTitleLabel.textColor = UIColor.grayColor()
-        self.view.addSubview(itemTitleLabel)
+        let itemTitle = UILabel(frame: CGRectMake(15, self.itemImage.bounds.height - (self.itemImage.frame.height / 7), self.view.frame.size.width - 15, CGFloat(20)))
+        itemTitle.text = self.supremeItem.title!
+        itemTitle.font = UIFont.boldSystemFontOfSize(20.0)
+        itemTitle.textAlignment = NSTextAlignment.Center
+        itemTitle.textColor = UIColor.grayColor()
+        let itemDescription = UITextView(frame: CGRectMake(0, itemTitle.frame.origin.x, self.view.frame.size.width, CGFloat(40)))
+        itemDescription.text = self.supremeItem.description!
+        
+        self.view.addSubview(itemTitle)
+        self.view.addSubview(itemDescription)
     }
     
     func itemStarred(sender: AnyObject?) {

@@ -110,7 +110,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hhU-Ny-LSa">
-                                <rect key="frame" x="20" y="72" width="560" height="560"/>
+                                <rect key="frame" x="20" y="89" width="560" height="560"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hhU-Ny-LSa" secondAttribute="height" multiplier="1:1" id="rDV-y0-AU2"/>
@@ -120,7 +120,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="hhU-Ny-LSa" firstAttribute="trailing" secondItem="Ord-P6-AS5" secondAttribute="trailingMargin" id="agV-ZG-yF1"/>
-                            <constraint firstItem="hhU-Ny-LSa" firstAttribute="top" secondItem="DAF-ji-aya" secondAttribute="bottom" constant="8" symbolic="YES" id="fkz-og-6GS"/>
+                            <constraint firstItem="hhU-Ny-LSa" firstAttribute="top" secondItem="DAF-ji-aya" secondAttribute="bottom" constant="25" id="fkz-og-6GS"/>
                             <constraint firstItem="hhU-Ny-LSa" firstAttribute="leading" secondItem="Ord-P6-AS5" secondAttribute="leadingMargin" id="swf-sZ-9tn"/>
                         </constraints>
                     </view>
