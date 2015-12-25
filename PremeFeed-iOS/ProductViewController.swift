@@ -18,12 +18,12 @@ class ProductViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         /*
         
             Should some of this shit be moved to a different view override, like `viewWillAppear` or something? My intention is to speed up the processing.
             This also leads me to ask if we could cache images (if the system doesn't do that for you by default) 
             I honestly don't know shit about iOS, this is my first ever iOS app.
+            dispatch_async
         
         */
         
@@ -39,9 +39,11 @@ class ProductViewController: UIViewController, UIScrollViewDelegate {
                 started to try this: http://swiftiostutorials.com/ios-tutorial-using-uipageviewcontroller-create-content-slider-objective-cswift/ but wasn't sure how to implement it within this app's circumstances
         */
         self.itemImage.image = UIImage(data: NSData(contentsOfURL: NSURL(string: self.supremeItem.images![0])!)!)!
-        let frame: CGRect = CGRectMake(CGFloat(25), self.itemImage.bounds.height, self.view.frame.size.width, CGFloat(30))
+        let frame: CGRect = CGRectMake(CGFloat(15), self.itemImage.bounds.height - (self.itemImage.bounds.height / 5.5), self.view.frame.size.width, CGFloat(20))
         let itemTitleLabel = UILabel(frame: frame)
         itemTitleLabel.text = self.supremeItem.title!
+        itemTitleLabel.font = UIFont.boldSystemFontOfSize(20.0)
+//        itemTitleLabel.textColor = UIColor.grayColor()
         self.view.addSubview(itemTitleLabel)
     }
     
@@ -49,7 +51,7 @@ class ProductViewController: UIViewController, UIScrollViewDelegate {
         (sender! as! UIBarButtonItem).image = UIImage(named: "star-filled")!
         // print("Item starred")
         
-        // Add code to store self.supremeItem in starred block of NSData, or some shit. I don't know.
+        // Add code to store self.supremeItem in starred block of CoreData, or some shit. I don't know.
     }
     
     override func didReceiveMemoryWarning() {
