@@ -109,23 +109,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hhU-Ny-LSa">
-                                <rect key="frame" x="20" y="89" width="560" height="560"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kVz-kK-aHs">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gNO-dJ-yug">
+                                        <rect key="frame" x="8" y="8" width="584" height="584"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="gNO-dJ-yug" secondAttribute="height" multiplier="1:1" id="1tL-S8-qsD"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="hhU-Ny-LSa" secondAttribute="height" multiplier="1:1" id="rDV-y0-AU2"/>
+                                    <constraint firstAttribute="bottom" secondItem="gNO-dJ-yug" secondAttribute="bottom" constant="-105" id="KrD-aS-aQt"/>
+                                    <constraint firstItem="gNO-dJ-yug" firstAttribute="centerX" secondItem="kVz-kK-aHs" secondAttribute="centerX" id="MqB-Yn-B6O"/>
+                                    <constraint firstItem="gNO-dJ-yug" firstAttribute="top" secondItem="kVz-kK-aHs" secondAttribute="top" constant="8" id="Zwh-eF-yRK"/>
+                                    <constraint firstItem="gNO-dJ-yug" firstAttribute="leading" secondItem="kVz-kK-aHs" secondAttribute="leading" constant="8" id="gNB-KM-ayC"/>
+                                    <constraint firstAttribute="trailing" secondItem="gNO-dJ-yug" secondAttribute="trailing" constant="8" id="k2O-dO-UwI"/>
                                 </constraints>
-                            </imageView>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="hhU-Ny-LSa" firstAttribute="trailing" secondItem="Ord-P6-AS5" secondAttribute="trailingMargin" id="agV-ZG-yF1"/>
-                            <constraint firstItem="hhU-Ny-LSa" firstAttribute="top" secondItem="DAF-ji-aya" secondAttribute="bottom" constant="25" id="fkz-og-6GS"/>
-                            <constraint firstItem="hhU-Ny-LSa" firstAttribute="leading" secondItem="Ord-P6-AS5" secondAttribute="leadingMargin" id="swf-sZ-9tn"/>
+                            <constraint firstItem="kVz-kK-aHs" firstAttribute="leading" secondItem="Ord-P6-AS5" secondAttribute="leadingMargin" constant="-20" id="ISw-M4-Tkb"/>
+                            <constraint firstItem="Jkr-QK-1WW" firstAttribute="top" secondItem="kVz-kK-aHs" secondAttribute="bottom" id="VJO-Kr-Dgl"/>
+                            <constraint firstItem="kVz-kK-aHs" firstAttribute="top" secondItem="DAF-ji-aya" secondAttribute="bottom" id="nua-OO-vCx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kVz-kK-aHs" secondAttribute="trailing" constant="-20" id="uO0-1t-zbl"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="itemImage" destination="hhU-Ny-LSa" id="Wl2-rQ-gwQ"/>
+                        <outlet property="itemImage" destination="gNO-dJ-yug" id="u6W-76-zjK"/>
+                        <outlet property="scrollView" destination="kVz-kK-aHs" id="Dnl-T6-iQA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t6W-r7-kKL" userLabel="First Responder" sceneMemberID="firstResponder"/>
