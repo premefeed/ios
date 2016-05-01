@@ -15,9 +15,7 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     var supremeItems = [SupremeItem]() {
         didSet {
-            // Force reload the CollectionView now that data exists
-            self.supremeCollectionView.reloadData()
-            self.collectionViewSpinner.stopAnimating()
+        
         }
     }
     
@@ -33,6 +31,12 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         api.getAllItems({ (items) -> Void in
             // Store the Array<SupremeItem>s in the controller for use later
             self.supremeItems = items
+            
+            dispatch_async(dispatch_get_main_queue(), {
+                    self.collectionView.reloadData()
+                    self.collectionViewSpinner.stopAnimating()
+                    self.collectionViewSpinner.hidden = true
+            })
             
             return
         })
